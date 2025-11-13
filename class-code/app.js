@@ -53,41 +53,105 @@ console.log(todoItemElements)
 // todoItemElements[1].style.color = 'green'
 
 
-for(let OneLiElement of todoItemElements){
-    if(OneLiElement.textContent === 'JavaScript' || OneLiElement.textContent === 'CSS'){
-            OneLiElement.style.color='green'
+// for(let OneLiElement of todoItemElements){
+//     if(OneLiElement.textContent === 'JavaScript' || OneLiElement.textContent === 'CSS'){
+//             OneLiElement.style.color='green'
 
+//     }
+//     else{
+//         OneLiElement.style.color='red'
+//     }
+//     console.log(OneLiElement)
+// }
+
+
+// // forEach()
+// todoItemElements.forEach((OneLiElement)=>{
+//     if(OneLiElement.textContent === 'JavaScript' || OneLiElement.textContent === 'CSS'){
+//             OneLiElement.style.color='green'
+
+//     }
+//     else{
+//         OneLiElement.style.color='red'
+//     }
+//     console.log(OneLiElement)
+// })
+
+
+// for(let i =0; i<todoItemElements.length; i++)
+//     {
+//     if(todoItemElements[i].textContent !== 'Python' ){
+//             todoItemElements[i].style.color='green'
+
+//     }
+//     else{
+//         todoItemElements[i].style.color='red'
+//     }
+//     console.log(todoItemElements[i])
+// }
+
+
+
+
+// Adding an element to the page
+const mainDiv = document.querySelector('#main-div')
+
+console.log(mainDiv)
+
+const pElement = document.createElement('p')
+
+pElement.textContent = 'New P Element'
+console.log(pElement)
+
+// this puts the p element inside of the div element
+mainDiv.appendChild(pElement)
+
+
+// Checks if the element has an attribute 
+console.log(pElement.hasAttribute('class'))
+
+
+// adding an attribute
+pElement.setAttribute('class','p-elements')
+
+// removing an attribute
+pElement.removeAttribute('class')
+
+
+pElement.className = 'something'
+
+
+// checks if a class exists in a element
+console.log(pElement.classList.contains('main'))
+
+console.log(pElement.classList.contains('something'))
+
+
+
+
+const todoInput = document.querySelector('#todo-input')
+
+function sayHello(){
+    console.log(todoInput.value)
+    
+    for(let OneLiElement of todoItemElements){
+        if(OneLiElement.textContent === 'JavaScript' || OneLiElement.textContent === 'CSS'){
+                OneLiElement.style.color='green'
+
+        }
+        else{
+            OneLiElement.style.color='red'
+        }
+        console.log(OneLiElement)
     }
-    else{
-        OneLiElement.style.color='red'
-    }
-    console.log(OneLiElement)
 }
 
 
-// forEach()
-todoItemElements.forEach((OneLiElement)=>{
-    if(OneLiElement.textContent === 'JavaScript' || OneLiElement.textContent === 'CSS'){
-            OneLiElement.style.color='green'
-
-    }
-    else{
-        OneLiElement.style.color='red'
-    }
-    console.log(OneLiElement)
-})
 
 
-for(let i =0; i<todoItemElements.length; i++)
-    {
-    if(todoItemElements[i].textContent !== 'Python' ){
-            todoItemElements[i].style.color='green'
+// adding an event
+pElement.addEventListener('click',sayHello)
 
-    }
-    else{
-        todoItemElements[i].style.color='red'
-    }
-    console.log(todoItemElements[i])
-}
+
 
 
